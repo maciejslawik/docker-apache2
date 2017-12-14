@@ -11,7 +11,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     rm -Rf /var/lib/apt/lists/* /usr/share/man/* /usr/share/doc/*
 
 # Vhost conf
-RUN  a2enmod actions fastcgi rewrite && \
+RUN  a2enmod actions fastcgi rewrite headers && \
      a2dissite default && \
      mkdir /var/lib/php-fcgi
 
